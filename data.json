@@ -1,0 +1,20 @@
+[
+    {"marca":"Gw","modelo":"scorpion","precio":2000000,"especificacion":"Marcos","foto":"./img/gwscorpion.jpg","cantidad":1},
+    {"marca":"Gw","modelo":"panther","precio":2100000,"especificacion":"Marcos","foto":"./img/gwpanther.jpg","cantidad":1},
+    {"marca":"Gw","modelo":"covadonga","precio":2100000,"especificacion":"Marcos","foto":"./img/gwcovadonga.jpg","cantidad":1},
+    {"marca":"Gw","modelo":"flamma","precio":2100000,"especificacion":"Marcos","foto":"./img/gwflamma.jpg","cantidad":1},
+    {"marca":"sram","modelo":"sramnx","precio":2300000,"especificacion":"Repuestos","foto":"./img/gruponx.jpg","cantidad":1},
+    {"marca":"sram","modelo":"sramgx","precio":2400000,"especificacion":"Repuestos","foto":"./img/grupogx.jpg","cantidad":1},
+    {"marca":"sram","modelo":"sramxx1","precio":4100000,"especificacion":"Repuestos","foto":"./img/grupoxx1.jpg","cantidad":1},
+    {"marca":"shimano","modelo":"shimano","precio":2500000,"especificacion":"Repuestos","foto":"./img/shimanom9100.jpg","cantidad":1},
+    {"marca":"grg","modelo":"verde","precio":230000,"especificacion":"Implementos","foto":"./img/badana.jpg","cantidad":1},
+    {"marca":"last","modelo":"hrt","precio":40000,"especificacion":"Implementos","foto":"./img/medias.jpg","cantidad":1},
+    {"marca":"bartalli","modelo":"x1","precio":41000,"especificacion":"Implementos","foto":"./img/guantes.jpg","cantidad":1},
+    {"marca":"shimano","modelo":"shimano","precio":215000,"especificacion":"Implementos","foto":"./img/camisa.jpg","cantidad":1},
+    {"marca":"POC","modelo":"POC","precio":630000,"especificacion":"Cascos","foto":"./img/cascopoc.jpg","cantidad":1},
+    {"marca":"POC","modelo":"POC","precio":409000,"especificacion":"Cascos","foto":"./img/cascopocb.jpg","cantidad":1},
+    {"marca":"POC","modelo":"POC","precio":430000,"especificacion":"Cascos","foto":"./img/cascopocg.jpg","cantidad":1},
+    {"marca":"POC","modelo":"POC","precio":215000,"especificacion":"Cascos","foto":"./img/cascopocg.jpg","cantidad":1},
+    {"marca":"Kask","modelo":"Valegro","precio":430000,"especificacion":"Cascos","foto":"./img/cascokaskl.jpg","cantidad":1},
+    {"marca":"Kask","modelo":"Protone","precio":215000,"especificacion":"Cascos","foto":"./img/protone.jpg","cantidad":1}
+]

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">         
+    <title>BIKESTWOGO</title>    
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="icon/bicicleta.png" type="image/x-icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script defer src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+   </head>   
+
+<body>   
+
+  <nav  id = "carritoCompras">  
+    <div class="container-fluid"> 
+      <a class="navbar-brand" href="#"> </a>             
+        <button id="toggleMyModal" type="button" class="btn btn-secondary btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal" >
+            Carrito de compras <i class="bi bi-bag-check-fill"></i>
+        </button>
+        </div>
+    </div>
+</nav>
+<h1 onclick="inicio ()" class="titulo">BIKESTWOGO</h1>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Carrito</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <!--div class="modal-body"-->
+            <div class="container-fluid">
+              <div class="container">
+                  <table class="table">
+                      <thead>
+                          <tr>
+                          <th scope="col">Marca</th>
+                          <th scope="col">Modelo</th>
+                          <th scope="col">Cantidad</th>
+                          <th scope="col">Precio</th>
+                          <th scope="col">Total</th>
+                          <th ></th>
+                          </tr>
+                      </thead>
+                      <tbody id="items"></tbody>
+                      <tfoot>
+                          <tr id="footer">
+                            <th scope="row" colspan="4">Total Compra: </th>
+                          <th  id = "total-compra" scope="row" colspan="6">Carrito vacío</th>
+                          </tr>
+                      </tfoot>
+                      </table>
+                  <div class="row" id="cards"></div>
+              </div>
+          
+          </div>
+          <div class="modal-footer">
+          <button type="button" class="btn btn-secondary"  data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-outline-success me-2" onclick="completarCompra ()" data-bs-dismiss="modal" >Terminar compra</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<br />
+
+
+     
+       
+       
+       <header  > 
+             <nav  id = "navegador" class="navbar navbar-expand-lg ">              
+              <div class="dropdown">   
+                <a style="color: black"   onclick ="inicio()" href="#" role="button" data-bs-toggle="dropdown1" aria-expanded="false" >Inicio</a>   
+              </div>
+              <div   class="dropdown">                  
+                 <a  onclick ="cambio1()"  style="color: black"  href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Bicicletas  </a>           
+                 <ul id ="inventario"   class="dropdown-menu dropdown-menu-dark"> </ul>                          
+               </div>             
+
+              <div class="dropdown"> 
+                  <a onclick="imprimirArticulosJSON ()"  style="color: black"  href="#" role="button" data-bs-toggle="dropdown"  aria-expanded="false" >Componentes</a>          
+                  <ul id="componentes" class="dropdown-menu dropdown-menu-dark"> </ul>
+                </div>
+
+              <div class="dropdown">
+                 <a onclick = "crearModal ()"  style="color: black"  href="#" role="button" data-bs-toggle="dropdown1" aria-expanded="false" >Accesorios</a>
+              </div>
+
+              <div class="dropdown"> 
+                 <a onclick = "crearModal1 ()" id = "componentes1" style="color: black"  href="#" role="button" data-bs-toggle="dropdown4" aria-expanded="false" >Tienda externa Vestuarios</a>
+              </div>
+
+              <div class="dropdown"> 
+                 <a style="color: black"  href="#" role="button" data-bs-toggle="dropdown6" aria-expanded="false" onclick="portafolio()">Portafolio</a>
+              </div>
+
+              <div class="dropdown"> 
+                 <a style="color: black"  href="#" role="button" data-bs-toggle="dropdown7" aria-expanded="false" >Servicios</a>
+              </div>
+
+              <div class="dropdown"> 
+                 <a style="color: black"  href="#" role="button" data-bs-toggle="dropdown8" aria-expanded="false" >Contacto</a>
+              </div>
+         </nav>
+    </header>
+
+<br>  
+<br> 
+<br> 
+<br>  
+<br> 
+
+
+
+  <section class="texto-header">
+    <div id ="inventario" ></div>      
+          <br> 
+            <div id ="impresion"></div>                 
+          <br>
+  </section>        
+    
+          <section  class= "container" >             
+            <div id ="cargarModelos" class= "row row-cols-1 row-cols-md-3 g-4" >  </div>  
+          </section>            
+          <div class="container-fluid"></div>
+           </header> 
+
+        <br>
+        <br>     
+      <main >
+         
+
+
+
+  <section>
+    <div class="portafolio" >
+      <section class="portafolio" >
+        <div class="contenedor" >
+          <h2 class="titulo" onclick="portafolio()">Portafolio</h2>
+           <div id = "galeria-port" class="galeria-port"></div>
+         </div> 
+        </div>
+  </section>
+  <br>
+  <section>
+   <br>
+     <h2 align = "center" > Que dicen nuestros clientes</h2>   
+      <section  class="cards"> 
+       <div class="card1">       
+        <p>
+          <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+            Toggle width collapse<img src="img/imag3.jpg" alt=""></button>
+        </p>
+       <div style="min-height: 120px;">
+          <div class="collapse collapse-horizontal" id="collapseWidthExample">
+            <div class="card card-body" style="width: 300px;">
+              This is some placeholder content for a horizontal collapse. It's hidden by default and shown when triggered.
+            </div>
+          </div>
+        </div>
+       <div class="contenido-texto-card1"></div>
+      </div>   
+
+      <div class="card1">      
+        <p>
+          <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+            Toggle width collapse<img src="img/imag3.jpg" alt=""></button>
+        </p>
+         <div style="min-height: 120px;">
+          <div class="collapse collapse-horizontal" id="collapseWidthExample">
+            <div class="card card-body" style="width: 300px;">
+              This is some placeholder content for a horizontal collapse. It's hidden by default and shown when triggered.
+            </div>
+          </div>
+        </div>
+       <div class="contenido-texto-card1"></div>
+      </div>   
+      </section>
+  </section>
+
+  <section class ="contenedorsobre-nosotros">
+    <h2>Nuestro Producto</h2>
+      <div class="contenedor-sobre-nosotros">
+       
+        <img src ="img/imag1.jpg" alt="" class="about-as">
+      <div class="contenedor-textos">
+      
+      <h3><span>1</span>los mejores productos</h3>
+      <p>Repudiandae distinctio minus id dolorem at. Voluptatem nam exercitationem quia asperiores dolorum? ipsum dolor sit amet consectetur adipisicing elit. Numquam nobis, laudantium itaque perferendis velit sunt autem distinctio deserunt? Mollitia facere inventore nobis voluptatibus id sit quo nostrum voluptas magni error.</p>
+      <h3><span>2</span>Porque escogernos</h3>
+      <p>Lorem Repudiandae nesciunt animi ad cum doloribus accusantium officia dolorum ipsa vitae esse. ipsum dolor sit amet consectetur adipisicing elit. Dolor expedita impedit ut porro doloribus voluptas perferendis possimus iusto, doloremque quisquam? ipsum dolor sit amet consectetur adipisicing elit. Numquam nobis, laudantium itaque perferendis velit sunt autem distinctio deserunt? Mollitia facere inventore nobis voluptatibus id sit quo nostrum voluptas magni error.</p>
+    </div>
+  </div>
+</section>
+
+  <section>
+     <div class="contenedor1">        
+        <section  class="about-services" id = "about-services"> 
+            <h2 align = "center">Nuestros Servicios</h2>          
+          </section>          
+      </div> 
+  </section>
+
+    
+
+     <footer>
+      <div class="contenedor-footer">
+        <div class="content-foo">
+          <h4>Phone</h4>
+          <p>3012194809</p>
+        </div>
+        <div class="content-foo">
+          <h4>Email</h4>
+          <p>wilq0836@</p>
+        </div>
+        <div class="content-foo">
+          <h4>Dirección</h4>
+          <p>Medellín-Antioquia-Colombia</p>
+        </div>
+      </div>
+      <h2 class="titulo-final">Wilmar Quintero</h2>
+     </footer>
+
+
+     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+     <script src="./modal.js"></script>
+     <script src="./Constructor.js"></script>
+     <script src="./Proyecto1.js"></script>
+     
+    </body>
+  </html>
